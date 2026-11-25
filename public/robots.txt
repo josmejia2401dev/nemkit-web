@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Keep app-only pages out of search results if the app shares this host in the future.
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://nemkit.netlify.app/sitemap.xml
