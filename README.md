@@ -38,17 +38,23 @@ Salida en `dist/nemkit-web/browser`. Netlify usa `netlify.toml`
 ## Estructura
 
 - `src/app/app.component.ts`: datos de los productos y URLs de acceso.
+- `src/app/app.config.ts`: preset de PrimeNG (Aura + neón) y modo oscuro.
 - `src/app/app.component.html`: hero, catálogo, secciones de Inventory y teaser
   de Notify.
-- `src/styles.css`: sistema visual (petróleo/jade/niebla) y estilos de productos.
+- `src/styles.css`: sistema visual (negro técnico + verde neón) y estilos de productos.
 - `src/index.html`: SEO, Open Graph y JSON-LD de la plataforma.
 - `public/`: favicon, imagen OG, robots y sitemap.
 
 ## Identidad
 
-- **Paleta**: petróleo `#15332D`, jade `#5F8478`, niebla `#F4F6F5`,
-  superficie `#E9EEEA`, borde `#DDE3DF` y tinta `#111A17`. La app de Inventory
-  conserva su propio verde; Nemkit se distingue por el fondo frío y el acento jade.
+- **Paleta**: negro técnico `#070A08`, panel `#0D1310`, borde `#1E2A24`,
+  texto `#F3F6F4`, verde neón `#39FF14` y acento profundo `#2ECC11`. La app de
+  Inventory conserva su propio verde; Nemkit se distingue por el fondo oscuro,
+  la retícula y el acento neón.
+- **Tipografía**: Space Grotesk para titulares, Inter para lectura y
+  JetBrains Mono para etiquetas y datos.
+- **Stack visual**: Angular 19 standalone, TailwindCSS 4 (PostCSS) y PrimeNG 19
+  (Aura con preset neón) para botones y etiquetas.
 - **Marca**: mangle (árbol con raíces aéreas) dibujado en SVG. Vive en
   `public/favicon.svg`, en el header/footer de `app.component.html` y en
   `public/og-image.svg` (fuente vectorial de `og-image.png`).

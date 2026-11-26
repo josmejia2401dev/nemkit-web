@@ -1,24 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
-  <title id="title">Nemkit — Un ecosistema para tu negocio</title>
-  <desc id="description">Inventory para inventario, ventas y restaurante. Notify para email, SMS y WebPush. Marca con un mangle frondoso.</desc>
+  <title id="title">Nemkit — Tu operación completa, un solo ecosistema</title>
+  <desc id="description">Inventory para inventario, ventas y restaurante. Notify para email, SMS y WebPush. Marca con un mangle frondoso sobre fondo negro y verde neón.</desc>
 
   <defs>
-    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#08110F" />
-      <stop offset=".52" stop-color="#15332D" />
-      <stop offset="1" stop-color="#2B5B51" />
+    <radialGradient id="glow" cx=".86" cy=".08" r=".62">
+      <stop offset="0" stop-color="#39FF14" stop-opacity=".16" />
+      <stop offset="1" stop-color="#39FF14" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx=".04" cy=".96" r=".55">
+      <stop offset="0" stop-color="#39FF14" stop-opacity=".08" />
+      <stop offset="1" stop-color="#39FF14" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0v56" fill="none" stroke="#FFFFFF" stroke-opacity=".045" stroke-width="1" />
+    </pattern>
+    <mask id="fade">
+      <rect width="1200" height="630" fill="url(#fadeGradient)" />
+    </mask>
+    <linearGradient id="fadeGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".9" />
+      <stop offset=".62" stop-color="#FFFFFF" stop-opacity=".25" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
-    <radialGradient id="calor" cx=".86" cy=".2" r=".55">
-      <stop offset="0" stop-color="#5F8478" stop-opacity=".26" />
-      <stop offset="1" stop-color="#5F8478" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="frio" cx=".06" cy=".92" r=".5">
-      <stop offset="0" stop-color="#5F8478" stop-opacity=".2" />
-      <stop offset="1" stop-color="#5F8478" stop-opacity="0" />
-    </radialGradient>
     <g id="mangle">
-      <path d="M24 24.5c-2.2 0-4-1.5-4.8-3.4-2.1.5-4.4-.4-5.5-2.2-1.8-.6-3-2.3-2.9-4.1-1.4-1.6-1.5-3.9-.2-5.5.3-2.2 2.1-3.9 4.4-4.1C16.6 3.4 19 2.7 21 3.7c1.9-.9 4.1-.4 5.4 1.1 2.1-.3 4.2.9 4.9 2.9 2.1.5 3.6 2.4 3.6 4.6 1.4 1.5 1.6 3.8.4 5.5-.1 2.2-1.8 4-4 4.3-1 1.6-2.9 2.5-4.8 2.1-.8 1.2-1.6 1.8-2.5 1.8Z" fill="#E7EFE9" />
-      <g fill="none" stroke="#E7EFE9" stroke-width="2.3" stroke-linecap="round">
+      <path d="M24 24.5c-2.2 0-4-1.5-4.8-3.4-2.1.5-4.4-.4-5.5-2.2-1.8-.6-3-2.3-2.9-4.1-1.4-1.6-1.5-3.9-.2-5.5.3-2.2 2.1-3.9 4.4-4.1C16.6 3.4 19 2.7 21 3.7c1.9-.9 4.1-.4 5.4 1.1 2.1-.3 4.2.9 4.9 2.9 2.1.5 3.6 2.4 3.6 4.6 1.4 1.5 1.6 3.8.4 5.5-.1 2.2-1.8 4-4 4.3-1 1.6-2.9 2.5-4.8 2.1-.8 1.2-1.6 1.8-2.5 1.8Z" fill="#39FF14" />
+      <g fill="none" stroke="#39FF14" stroke-width="2.4" stroke-linecap="round">
         <path d="M24 24v9.5" />
         <path d="M24 33.5c-3.4 2.4-7.4 3-11.4 1.3" />
         <path d="M24 33.5c3.4 2.4 7.4 3 11.4 1.3" />
@@ -28,46 +34,50 @@
     </g>
   </defs>
 
-  <rect width="1200" height="630" fill="url(#fondo)" />
-  <rect width="1200" height="630" fill="url(#calor)" />
-  <rect width="1200" height="630" fill="url(#frio)" />
-  <rect x="34" y="34" width="1132" height="562" rx="22" fill="none" stroke="#E7EFE9" stroke-opacity=".18" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap");
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+    .sans { font-family: "Inter", system-ui, sans-serif; }
+    .display { font-family: "Space Grotesk", system-ui, sans-serif; }
+  </style>
 
-  <g transform="translate(78 62)">
-    <rect width="46" height="46" rx="13" fill="#E7EFE9" fill-opacity=".1" stroke="#E7EFE9" stroke-opacity=".35" />
-    <use href="#mangle" transform="scale(.98)" />
-    <text x="60" y="26" fill="#F4F6F5" font-family="Fraunces, Georgia, serif" font-size="27" font-weight="500">nemkit</text>
-    <text x="60" y="41" fill="#E7EFE9" fill-opacity=".6" font-family="'DM Sans', Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2.4">NEGOCIOS CONECTADOS</text>
+  <rect width="1200" height="630" fill="#070A08" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+  <rect width="1200" height="630" fill="url(#glow2)" />
+  <rect width="1200" height="630" fill="url(#grid)" mask="url(#fade)" />
+  <rect x="30" y="30" width="1140" height="570" rx="22" fill="none" stroke="#39FF14" stroke-opacity=".18" />
+
+  <!-- Marca -->
+  <rect x="78" y="62" width="46" height="46" rx="13" fill="#0C120F" stroke="#39FF14" stroke-opacity=".4" />
+  <g transform="translate(85 69) scale(0.6667)">
+    <use href="#mangle" />
+  </g>
+  <text x="138" y="86" class="display" font-size="27" font-weight="600" letter-spacing="-.6" fill="#F3F6F4">nemkit</text>
+  <text x="139" y="103" class="mono" font-size="8" font-weight="500" letter-spacing="2.6" fill="#7D8A82">NEGOCIOS CONECTADOS</text>
+
+  <!-- Texto -->
+  <circle cx="82" cy="152" r="3.5" fill="#39FF14" />
+  <text x="94" y="156" class="mono" font-size="11" font-weight="500" letter-spacing="2.6" fill="#9BA9A0">LA PLATAFORMA PARA TU NEGOCIO</text>
+
+  <text x="78" y="230" class="display" font-size="62" font-weight="700" letter-spacing="-2.6" fill="#F3F6F4">Tu operación completa.</text>
+  <text x="78" y="296" class="display" font-size="62" font-weight="700" letter-spacing="-2.6" fill="#39FF14">Un solo ecosistema.</text>
+
+  <text x="78" y="346" class="sans" font-size="18" fill="#A6B3AB">Inventory para inventario, ventas y restaurante. Notify para</text>
+  <text x="78" y="374" class="sans" font-size="18" fill="#A6B3AB">email, SMS y WebPush. La misma cuenta, la misma forma</text>
+  <text x="78" y="402" class="sans" font-size="18" fill="#A6B3AB">de trabajar.</text>
+
+  <rect x="78" y="438" width="226" height="38" rx="19" fill="#39FF14" />
+  <text x="191" y="462" class="mono" font-size="10" font-weight="500" letter-spacing="1" fill="#06110A" text-anchor="middle">INVENTORY · DISPONIBLE</text>
+  <rect x="316" y="438" width="232" height="38" rx="19" fill="none" stroke="#2A3A32" />
+  <text x="432" y="462" class="mono" font-size="10" font-weight="500" letter-spacing="1" fill="#A7B5AC" text-anchor="middle">NOTIFY · PRÓXIMAMENTE</text>
+
+  <!-- Arte -->
+  <circle cx="944" cy="312" r="205" fill="none" stroke="#39FF14" stroke-opacity=".08" />
+  <circle cx="944" cy="312" r="165" fill="none" stroke="#39FF14" stroke-opacity=".16" />
+  <rect x="846" y="214" width="196" height="196" rx="54" fill="#39FF14" fill-opacity=".05" stroke="#39FF14" stroke-opacity=".34" />
+  <g transform="translate(861 229) scale(3.4583)">
+    <use href="#mangle" />
   </g>
 
-  <g font-family="Fraunces, Georgia, serif" fill="#F4F6F5">
-    <text x="78" y="236" font-size="62" font-weight="400" letter-spacing="-1.6">Un ecosistema</text>
-    <text x="78" y="300" font-size="62" font-weight="300" font-style="italic" letter-spacing="-1.6" fill="#A8C4B8">para tu negocio.</text>
-  </g>
-
-  <rect x="78" y="330" width="62" height="2" fill="#5F8478" />
-
-  <g font-family="'DM Sans', Arial, sans-serif" fill="#F4F6F5" fill-opacity=".74" font-size="19">
-    <text x="78" y="382">Inventory para inventario, ventas y restaurante.</text>
-    <text x="78" y="411">Notify para email, SMS y WebPush. La misma cuenta,</text>
-    <text x="78" y="440">la misma forma de trabajar.</text>
-  </g>
-
-  <g font-family="'DM Sans', Arial, sans-serif" font-size="12" font-weight="700" letter-spacing=".6">
-    <rect x="78" y="482" width="200" height="38" rx="19" fill="#A8C4B8" />
-    <text x="94" y="506" fill="#111A17">INVENTORY DISPONIBLE</text>
-    <rect x="290" y="482" width="212" height="38" rx="19" fill="none" stroke="#E7EFE9" stroke-opacity=".34" />
-    <text x="306" y="506" fill="#F4F6F5" fill-opacity=".78">NOTIFY PRÓXIMAMENTE</text>
-  </g>
-
-  <g transform="translate(1010 315)">
-    <circle r="165" fill="none" stroke="#E7EFE9" stroke-opacity=".08" />
-    <circle r="130" fill="none" stroke="#E7EFE9" stroke-opacity=".16" />
-    <rect x="-100" y="-100" width="200" height="200" rx="54" fill="#E7EFE9" fill-opacity=".09" stroke="#E7EFE9" stroke-opacity=".2" />
-    <g transform="translate(-86 -86) scale(3.58)">
-      <use href="#mangle" />
-    </g>
-  </g>
-
-  <text x="78" y="576" fill="#E7EFE9" fill-opacity=".42" font-family="'DM Sans', Arial, sans-serif" font-size="11" letter-spacing="2">NEMKIT.NETLIFY.APP</text>
+  <text x="78" y="584" class="mono" font-size="10" letter-spacing="2" fill="#6F8077">NEMKIT.NETLIFY.APP</text>
 </svg>

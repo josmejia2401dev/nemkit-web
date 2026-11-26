@@ -34,7 +34,7 @@
   <nav id="main-navigation" class="main-nav" [class.main-nav--open]="menuOpen()" aria-label="Principal">
     <a href="#productos" (click)="closeMenu()">Productos</a>
     <a href="#inventory" (click)="closeMenu()">Inventory</a>
-    <a href="#notify" (click)="closeMenu()">Notify <i class="nav-badge">Pronto</i></a>
+    <a href="#notify" (click)="closeMenu()">Notify <p-tag value="Pronto" styleClass="nav-badge" /></a>
     <a href="#como-funciona" (click)="closeMenu()">Cómo funciona</a>
     <a class="nav-login" [href]="loginUrl">Iniciar sesión</a>
     <a class="button button-small nav-cta" [href]="registerUrl">Crear cuenta</a>
@@ -52,8 +52,8 @@
         restaurante; suma Notify y los próximos módulos a medida que creces.
       </p>
       <div class="hero-actions">
-        <a class="button" [href]="registerUrl">
-          Empezar con Inventory <span aria-hidden="true">↗</span>
+        <a pButton class="nk-cta" [href]="registerUrl">
+          Empezar con Inventory <i class="pi pi-arrow-up-right" aria-hidden="true"></i>
         </a>
         <a class="text-link" href="#productos">
           Ver productos <span aria-hidden="true">↓</span>
@@ -305,7 +305,7 @@
       <p class="eyebrow eyebrow--light">TU SIGUIENTE PASO</p>
       <h2>Tienda o restaurante,<br />más organizado vende mejor.</h2>
       <p>Empieza con Inventory y reúne inventario, compras, ventas, cocina, domicilios, clientes, reportes y pagos a empleados. Notify y los próximos productos se suman a la misma cuenta.</p>
-      <a class="button button--light" [href]="registerUrl">Crear cuenta <span>↗</span></a>
+      <a pButton class="nk-cta" [href]="registerUrl">Crear cuenta <i class="pi pi-arrow-up-right" aria-hidden="true"></i></a>
     </div>
     <div class="cta-mark" aria-hidden="true">
       <svg viewBox="0 0 48 48" fill="none">

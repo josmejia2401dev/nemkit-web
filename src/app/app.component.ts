@@ -1,4 +1,6 @@
 import { Component, HostListener, signal } from "@angular/core";
+import { ButtonModule } from "primeng/button";
+import { TagModule } from "primeng/tag";
 import { environment } from "../environments/environment";
 
 export type ProductStatus = "available" | "soon" | "exploring";
@@ -22,6 +24,7 @@ const trim = (url: string): string => url.replace(/\/$/, "");
 @Component({
   selector: "app-root",
   standalone: true,
+  imports: [ButtonModule, TagModule],
   templateUrl: "./app.component.html",
 })
 export class AppComponent {
