@@ -40,15 +40,15 @@ Salida en `dist/nemkit-web/browser`. Netlify usa `netlify.toml`
 - `src/app/app.component.ts`: datos de los productos y URLs de acceso.
 - `src/app/app.component.html`: hero, catálogo, secciones de Inventory y teaser
   de Notify.
-- `src/styles.css`: sistema visual (verde/crema) y estilos de productos.
+- `src/styles.css`: sistema visual (petróleo/marfil/latón) y estilos de productos.
 - `src/index.html`: SEO, Open Graph y JSON-LD de la plataforma.
 - `public/`: favicon, imagen OG, robots y sitemap.
 
 ## Identidad
 
-- **Paleta**: verde profundo `#0e4b4d`, papel cálido `#f3ede2`, arcilla
-  `#b96a4b`, crema `#efd9c6`. La app de Inventory conserva su propio verde;
-  Nemkit se distingue por el papel cálido y el acento arcilla.
+- **Paleta**: petróleo profundo `#17332E`, marfil `#F7F5F0`, latón
+  `#A8874E`, crema `#F0E6CF` y tinta `#141B19`. La app de Inventory conserva
+  su propio verde; Nemkit se distingue por el marfil neutro y el latón.
 - **Marca**: mangle (árbol con raíces aéreas) dibujado en SVG. Vive en
   `public/favicon.svg`, en el header/footer de `app.component.html` y en
   `public/og-image.svg` (fuente vectorial de `og-image.png`).
