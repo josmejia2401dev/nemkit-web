@@ -48,13 +48,14 @@ Salida en `dist/nemkit-web/browser`. Netlify usa `netlify.toml`
 ## Identidad
 
 - **Paleta**: negro técnico `#070A08`, panel `#0D1310`, borde `#1E2A24`,
-  texto `#F3F6F4`, verde neón `#39FF14` y acento profundo `#2ECC11`. La app de
-  Inventory conserva su propio verde; Nemkit se distingue por el fondo oscuro,
-  la retícula y el acento neón.
+  texto `#F3F6F4`, verde petróleo `#276650` (rellenos y CTAs) y su tinte legible
+  `#5FA98C` para acentos de texto; hover `#327A60` y profundo `#15332D`. La app
+  de Inventory comparte ese verde; Nemkit se distingue por el fondo oscuro y la
+  retícula.
 - **Tipografía**: Space Grotesk para titulares, Inter para lectura y
   JetBrains Mono para etiquetas y datos.
 - **Stack visual**: Angular 19 standalone, TailwindCSS 4 (PostCSS) y PrimeNG 19
-  (Aura con preset neón) para botones y etiquetas.
+  (Aura con preset petróleo) para botones y etiquetas.
 - **Marca**: mangle (árbol con raíces aéreas) dibujado en SVG. Vive en
   `public/favicon.svg`, en el header/footer de `app.component.html` y en
   `public/og-image.svg` (fuente vectorial de `og-image.png`).

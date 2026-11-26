@@ -6,25 +6,25 @@ import { providePrimeNG } from "primeng/config";
 const NemkitPreset = definePreset(Aura, {
   semantic: {
     primary: {
-      50: "#EBFFE5",
-      100: "#D2FFC4",
-      200: "#A8FF8F",
-      300: "#7BFF5C",
-      400: "#57FF32",
-      500: "#39FF14",
-      600: "#2ECC11",
-      700: "#22A30D",
-      800: "#1B7A0A",
-      900: "#125206",
-      950: "#0A2E03",
+      50: "#EAF4EF",
+      100: "#D2E8DE",
+      200: "#A6D2C0",
+      300: "#7BBCA2",
+      400: "#4F9E7F",
+      500: "#276650",
+      600: "#1F5644",
+      700: "#184538",
+      800: "#12352B",
+      900: "#0C261F",
+      950: "#061812",
     },
     colorScheme: {
       dark: {
         primary: {
-          color: "#39FF14",
+          color: "#5FA98C",
           contrastColor: "#06110A",
-          hoverColor: "#57FF32",
-          activeColor: "#2ECC11",
+          hoverColor: "#7FBFA6",
+          activeColor: "#276650",
         },
         surface: {
           0: "#0A0F0C",

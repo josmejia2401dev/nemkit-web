@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
   <title id="title">Nemkit — Tu operación completa, un solo ecosistema</title>
-  <desc id="description">Inventory para inventario, ventas y restaurante. Notify para email, SMS y WebPush. Marca con un mangle frondoso sobre fondo negro y verde neón.</desc>
+  <desc id="description">Inventory para inventario, ventas y restaurante. Notify para email, SMS y WebPush. Marca con un mangle frondoso sobre fondo negro y verde petróleo.</desc>
 
   <defs>
     <radialGradient id="glow" cx=".86" cy=".08" r=".62">
-      <stop offset="0" stop-color="#39FF14" stop-opacity=".16" />
-      <stop offset="1" stop-color="#39FF14" stop-opacity="0" />
+      <stop offset="0" stop-color="#5FA98C" stop-opacity=".16" />
+      <stop offset="1" stop-color="#5FA98C" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="glow2" cx=".04" cy=".96" r=".55">
-      <stop offset="0" stop-color="#39FF14" stop-opacity=".08" />
-      <stop offset="1" stop-color="#39FF14" stop-opacity="0" />
+      <stop offset="0" stop-color="#5FA98C" stop-opacity=".08" />
+      <stop offset="1" stop-color="#5FA98C" stop-opacity="0" />
     </radialGradient>
     <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
       <path d="M56 0H0v56" fill="none" stroke="#FFFFFF" stroke-opacity=".045" stroke-width="1" />
@@ -23,8 +23,8 @@
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
     <g id="mangle">
-      <path d="M24 24.5c-2.2 0-4-1.5-4.8-3.4-2.1.5-4.4-.4-5.5-2.2-1.8-.6-3-2.3-2.9-4.1-1.4-1.6-1.5-3.9-.2-5.5.3-2.2 2.1-3.9 4.4-4.1C16.6 3.4 19 2.7 21 3.7c1.9-.9 4.1-.4 5.4 1.1 2.1-.3 4.2.9 4.9 2.9 2.1.5 3.6 2.4 3.6 4.6 1.4 1.5 1.6 3.8.4 5.5-.1 2.2-1.8 4-4 4.3-1 1.6-2.9 2.5-4.8 2.1-.8 1.2-1.6 1.8-2.5 1.8Z" fill="#39FF14" />
-      <g fill="none" stroke="#39FF14" stroke-width="2.4" stroke-linecap="round">
+      <path d="M24 24.5c-2.2 0-4-1.5-4.8-3.4-2.1.5-4.4-.4-5.5-2.2-1.8-.6-3-2.3-2.9-4.1-1.4-1.6-1.5-3.9-.2-5.5.3-2.2 2.1-3.9 4.4-4.1C16.6 3.4 19 2.7 21 3.7c1.9-.9 4.1-.4 5.4 1.1 2.1-.3 4.2.9 4.9 2.9 2.1.5 3.6 2.4 3.6 4.6 1.4 1.5 1.6 3.8.4 5.5-.1 2.2-1.8 4-4 4.3-1 1.6-2.9 2.5-4.8 2.1-.8 1.2-1.6 1.8-2.5 1.8Z" fill="#5FA98C" />
+      <g fill="none" stroke="#5FA98C" stroke-width="2.4" stroke-linecap="round">
         <path d="M24 24v9.5" />
         <path d="M24 33.5c-3.4 2.4-7.4 3-11.4 1.3" />
         <path d="M24 33.5c3.4 2.4 7.4 3 11.4 1.3" />
@@ -45,10 +45,10 @@
   <rect width="1200" height="630" fill="url(#glow)" />
   <rect width="1200" height="630" fill="url(#glow2)" />
   <rect width="1200" height="630" fill="url(#grid)" mask="url(#fade)" />
-  <rect x="30" y="30" width="1140" height="570" rx="22" fill="none" stroke="#39FF14" stroke-opacity=".18" />
+  <rect x="30" y="30" width="1140" height="570" rx="22" fill="none" stroke="#5FA98C" stroke-opacity=".18" />
 
   <!-- Marca -->
-  <rect x="78" y="62" width="46" height="46" rx="13" fill="#0C120F" stroke="#39FF14" stroke-opacity=".4" />
+  <rect x="78" y="62" width="46" height="46" rx="13" fill="#0C120F" stroke="#5FA98C" stroke-opacity=".4" />
   <g transform="translate(85 69) scale(0.6667)">
     <use href="#mangle" />
   </g>
@@ -56,25 +56,25 @@
   <text x="139" y="103" class="mono" font-size="8" font-weight="500" letter-spacing="2.6" fill="#7D8A82">NEGOCIOS CONECTADOS</text>
 
   <!-- Texto -->
-  <circle cx="82" cy="152" r="3.5" fill="#39FF14" />
+  <circle cx="82" cy="152" r="3.5" fill="#5FA98C" />
   <text x="94" y="156" class="mono" font-size="11" font-weight="500" letter-spacing="2.6" fill="#9BA9A0">LA PLATAFORMA PARA TU NEGOCIO</text>
 
   <text x="78" y="230" class="display" font-size="62" font-weight="700" letter-spacing="-2.6" fill="#F3F6F4">Tu operación completa.</text>
-  <text x="78" y="296" class="display" font-size="62" font-weight="700" letter-spacing="-2.6" fill="#39FF14">Un solo ecosistema.</text>
+  <text x="78" y="296" class="display" font-size="62" font-weight="700" letter-spacing="-2.6" fill="#5FA98C">Un solo ecosistema.</text>
 
   <text x="78" y="346" class="sans" font-size="18" fill="#A6B3AB">Inventory para inventario, ventas y restaurante. Notify para</text>
   <text x="78" y="374" class="sans" font-size="18" fill="#A6B3AB">email, SMS y WebPush. La misma cuenta, la misma forma</text>
   <text x="78" y="402" class="sans" font-size="18" fill="#A6B3AB">de trabajar.</text>
 
-  <rect x="78" y="438" width="226" height="38" rx="19" fill="#39FF14" />
-  <text x="191" y="462" class="mono" font-size="10" font-weight="500" letter-spacing="1" fill="#06110A" text-anchor="middle">INVENTORY · DISPONIBLE</text>
+  <rect x="78" y="438" width="226" height="38" rx="19" fill="#276650" />
+  <text x="191" y="462" class="mono" font-size="10" font-weight="500" letter-spacing="1" fill="#F3F6F4" text-anchor="middle">INVENTORY · DISPONIBLE</text>
   <rect x="316" y="438" width="232" height="38" rx="19" fill="none" stroke="#2A3A32" />
   <text x="432" y="462" class="mono" font-size="10" font-weight="500" letter-spacing="1" fill="#A7B5AC" text-anchor="middle">NOTIFY · PRÓXIMAMENTE</text>
 
   <!-- Arte -->
-  <circle cx="944" cy="312" r="205" fill="none" stroke="#39FF14" stroke-opacity=".08" />
-  <circle cx="944" cy="312" r="165" fill="none" stroke="#39FF14" stroke-opacity=".16" />
-  <rect x="846" y="214" width="196" height="196" rx="54" fill="#39FF14" fill-opacity=".05" stroke="#39FF14" stroke-opacity=".34" />
+  <circle cx="944" cy="312" r="205" fill="none" stroke="#5FA98C" stroke-opacity=".08" />
+  <circle cx="944" cy="312" r="165" fill="none" stroke="#5FA98C" stroke-opacity=".16" />
+  <rect x="846" y="214" width="196" height="196" rx="54" fill="#276650" fill-opacity=".14" stroke="#5FA98C" stroke-opacity=".34" />
   <g transform="translate(861 229) scale(3.4583)">
     <use href="#mangle" />
   </g>
