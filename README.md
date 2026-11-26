@@ -44,5 +44,14 @@ Salida en `dist/nemkit-web/browser`. Netlify usa `netlify.toml`
 - `src/index.html`: SEO, Open Graph y JSON-LD de la plataforma.
 - `public/`: favicon, imagen OG, robots y sitemap.
 
+## Identidad
+
+- **Paleta**: verde profundo `#0e4b4d`, papel cálido `#f3ede2`, arcilla
+  `#b96a4b`, crema `#efd9c6`. La app de Inventory conserva su propio verde;
+  Nemkit se distingue por el papel cálido y el acento arcilla.
+- **Marca**: mangle (árbol con raíces aéreas) dibujado en SVG. Vive en
+  `public/favicon.svg`, en el header/footer de `app.component.html` y en
+  `public/og-image.svg` (fuente vectorial de `og-image.png`).
+
 Cuando Notify se despliegue, cambia su `status` a `available` en
 `app.component.ts`; la tarjeta pasará a enlazar `notifyLandingUrl`.
