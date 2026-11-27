@@ -4,8 +4,8 @@ Portal público de **Nemkit** para presentar los dos productos comerciales:
 
 | Producto | App | Estado |
 |---|---|---|
-| Nemkit Inventory | `https://neminv-app.netlify.app` | Disponible |
-| Nemkit Restaurant | `https://nemres.netlify.app` | Disponible |
+| Nemkit Inventory | `https://neminv.pages.dev` | Disponible |
+| Nemkit Restaurant | `https://nemres.pages.dev` | Disponible |
 | Nemkit (este portal) | `https://nemkit.pages.dev` | — |
 
 Notify no forma parte de este portal: es un producto privado e interno.
@@ -26,8 +26,8 @@ URLs de producto en `src/environments/environment.ts`:
 
 Producción:
 
-- Inventory: `https://neminv-app.netlify.app`.
-- Restaurant: `https://nemres.netlify.app`.
+- Inventory: `https://neminv.pages.dev`.
+- Restaurant: `https://nemres.pages.dev`.
 
 ## Rutas
 
