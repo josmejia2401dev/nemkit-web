@@ -1,0 +1,23 @@
+<article class="nk-product-card" [class]="'nk-product-card--' + product.accent">
+  <div class="nk-product-card-top">
+    <span class="nk-product-icon" aria-hidden="true">{{ product.accent === "restaurant" ? "🍽" : "▦" }}</span>
+    <span class="nk-product-status">Disponible</span>
+  </div>
+
+  <h3>{{ product.name }}</h3>
+  <p class="nk-product-tagline">{{ product.tagline }}</p>
+  <p class="nk-product-description">{{ product.description }}</p>
+
+  <ul class="nk-product-list">
+    @for (feature of product.heroBullets; track feature) {
+      <li><span aria-hidden="true">✓</span>{{ feature }}</li>
+    }
+  </ul>
+
+  <div class="nk-product-actions">
+    <a class="button" [routerLink]="'/' + product.slug">
+      Ver {{ product.name.split(" ")[1] }} <span aria-hidden="true">↗</span>
+    </a>
+    <a class="nk-product-login" [href]="product.registerUrl">Crear cuenta</a>
+  </div>
+</article>

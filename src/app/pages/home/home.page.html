@@ -1,0 +1,144 @@
+<section class="nk-home-hero section-shell">
+  <div class="nk-home-copy">
+    <p class="eyebrow"><span></span> DOS PRODUCTOS. UNA MISMA BASE.</p>
+    <h1>Elige cómo operar.<br /><em>Inventory o Restaurant.</em></h1>
+    <p class="nk-home-description">
+      Nemkit reúne dos productos independientes para negocios reales: Inventory
+      para tiendas que venden productos y Restaurant para mesas, cocina y
+      comandas. Cada uno con su propia cuenta, su propio flujo y su propia app.
+    </p>
+    <div class="nk-home-actions">
+      <a class="button" routerLink="/inventory">Ver Inventory <span aria-hidden="true">↗</span></a>
+      <a class="text-link" routerLink="/restaurant">Ver Restaurant <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="nk-home-proof">
+      <span>✓</span> Sin tarjeta
+      <i></i>
+      <span>✓</span> Plan gratuito
+      <i></i>
+      <span>✓</span> Listo para operar
+    </div>
+  </div>
+
+  <div class="nk-home-visual">
+    <div class="nk-home-visual-item">
+      <span class="nk-visual-label">INVENTORY · CAJA Y STOCK</span>
+      <app-product-visual kind="dashboard" productId="inventory" />
+    </div>
+    <div class="nk-home-visual-item nk-home-visual-item--restaurant">
+      <span class="nk-visual-label">RESTAURANT · COCINA</span>
+      <app-product-visual kind="kitchen" productId="restaurant" />
+    </div>
+  </div>
+</section>
+
+<section class="nk-home-strip" aria-label="Dos productos">
+  <div class="section-shell nk-home-strip-inner">
+    <span>UN PRODUCTO PARA CADA OPERACIÓN</span>
+    <strong><i>▦</i> TIENDAS Y RETAIL</strong>
+    <b></b>
+    <strong><i>🍽</i> RESTAURANTES Y COCINA</strong>
+    <b></b>
+    <strong><i>✓</i> LA MISMA BASE NEMKIT</strong>
+  </div>
+</section>
+
+<section id="productos" class="nk-section section-shell">
+  <div class="nk-section-heading">
+    <p class="eyebrow">PRODUCTOS</p>
+    <h2>¿Qué necesita tu negocio hoy?</h2>
+    <p>Elige el producto que corresponde a tu operación. No tienes que decidir los dos al mismo tiempo.</p>
+  </div>
+  <div class="nk-products-grid">
+    @for (product of products; track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </div>
+</section>
+
+<section class="nk-compare section-shell">
+  <div class="nk-section-heading">
+    <p class="eyebrow">COMPARATIVA RÁPIDA</p>
+    <h2>¿Cuál es para ti?</h2>
+  </div>
+  <div class="nk-compare-grid">
+    <article class="nk-compare-card nk-compare-card--inventory">
+      <h3>Inventory</h3>
+      <p>Si vendes productos físicos y el cliente pasa a caja.</p>
+      <ul>
+        <li><span>✓</span> Tiendas, papelerías, ferreterías, boutiques.</li>
+        <li><span>✓</span> Ventas de mostrador y domicilios.</li>
+        <li><span>✓</span> Plan separe con 0 %.</li>
+        <li><span>✓</span> Sin cocina ni preparación de pedidos.</li>
+      </ul>
+      <a class="text-link" routerLink="/inventory">Conocer Inventory <span>↗</span></a>
+    </article>
+    <article class="nk-compare-card nk-compare-card--restaurant">
+      <h3>Restaurant</h3>
+      <p>Si tienes mesas, cocina y pedidos que preparar.</p>
+      <ul>
+        <li><span>✓</span> Restaurantes, cafeterías y cocinas.</li>
+        <li><span>✓</span> Mesas, comandas y cocina.</li>
+        <li><span>✓</span> Meseros, cocineros y domicilios.</li>
+        <li><span>✓</span> Recetas e insumos.</li>
+      </ul>
+      <a class="text-link" routerLink="/restaurant">Conocer Restaurant <span>↗</span></a>
+    </article>
+  </div>
+</section>
+
+<section id="plataforma" class="nk-platform section-shell">
+  <div class="nk-section-heading">
+    <p class="eyebrow">BASE COMÚN</p>
+    <h2>Dos productos, la misma tranquilidad.</h2>
+    <p>La operación cambia; la base de cuentas, roles y seguridad es la misma.</p>
+  </div>
+  <div class="nk-platform-grid">
+    @for (feature of platformFeatures; track feature.title) {
+      <article>
+        <span aria-hidden="true">{{ feature.icon }}</span>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="nk-steps section-shell">
+  <div class="nk-section-heading">
+    <p class="eyebrow">CÓMO EMPEZAR</p>
+    <h2>De la decisión a la operación.</h2>
+  </div>
+  <div class="nk-steps-grid">
+    <article><span>01</span><h3>Elige el producto</h3><p>Inventory para tienda; Restaurant para mesas y cocina.</p></article>
+    <article><span>02</span><h3>Crea tu cuenta</h3><p>Registra el negocio y empieza con el plan gratuito.</p></article>
+    <article><span>03</span><h3>Configura y vende</h3><p>Productos, equipo y primeras operaciones en el mismo día.</p></article>
+  </div>
+</section>
+
+<section class="nk-faq section-shell">
+  <div class="nk-section-heading">
+    <p class="eyebrow">PREGUNTAS FRECUENTES</p>
+    <h2>Para elegir con claridad.</h2>
+  </div>
+  <div class="nk-faq-list">
+    @for (item of faq; track item.question) {
+      <details>
+        <summary>{{ item.question }}</summary>
+        <p>{{ item.answer }}</p>
+      </details>
+    }
+  </div>
+</section>
+
+<section class="nk-final-cta section-shell">
+  <div>
+    <p class="eyebrow">TU SIGUIENTE PASO</p>
+    <h2>Elige el producto para tu negocio.</h2>
+    <p>Cada app tiene su propio registro, su propio flujo y su propio equipo.</p>
+  </div>
+  <div class="nk-final-actions">
+    <a class="button" [href]="inventory.registerUrl">Crear cuenta Inventory <span>↗</span></a>
+    <a class="button button--light" [href]="restaurant.registerUrl">Crear cuenta Restaurant <span>↗</span></a>
+  </div>
+</section>

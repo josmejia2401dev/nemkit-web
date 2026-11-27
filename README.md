@@ -1,14 +1,14 @@
 # nemkit-web
 
-Sitio principal de **Nemkit**: presenta los productos de la plataforma y deriva a
-cada uno.
+Portal público de **Nemkit** para presentar los dos productos comerciales:
 
-| Producto | Sitio | Estado |
+| Producto | App | Estado |
 |---|---|---|
-| Nemkit Inventory | `https://neminv.netlify.app` | Disponible |
-| Nemkit Inventory (app) | `https://neminv-app.netlify.app` | Disponible |
-| Nemkit Notify | `https://nemnot.netlify.app` | Próximamente |
-| Nemkit (este sitio) | `https://nemkit.netlify.app` | — |
+| Nemkit Inventory | `https://neminv-app.netlify.app` | Disponible |
+| Nemkit Restaurant | `https://nemres.netlify.app` | Disponible |
+| Nemkit (este portal) | `https://nemkit.netlify.app` | — |
+
+Notify no forma parte de este portal: es un producto privado e interno.
 
 ## Desarrollo
 
@@ -17,14 +17,25 @@ npm install
 npm start -- --port 4400
 ```
 
-Abre `http://localhost:4400`. Las URLs de los productos viven en
-`src/environments/environment.ts`:
+Abre `http://localhost:4400`.
 
-- `inventoryLandingUrl` → `http://localhost:4400` en local (o el puerto donde
-  corras la landing de inventario).
-- `inventoryAppUrl` → `http://localhost:4200` (app de inventario).
-- `notifyLandingUrl` → `http://localhost:4401` cuando exista la landing de
-  notificaciones.
+URLs de producto en `src/environments/environment.ts`:
+
+- `inventoryAppUrl` → `http://localhost:4200`.
+- `restaurantAppUrl` → `http://localhost:4201`.
+
+Producción:
+
+- Inventory: `https://neminv-app.netlify.app`.
+- Restaurant: `https://nemres.netlify.app`.
+
+## Rutas
+
+```text
+/           Portal: Inventory + Restaurant
+/inventory  Landing de Nemkit Inventory
+/restaurant Landing de Nemkit Restaurant
+```
 
 ## Build y despliegue
 
@@ -33,32 +44,23 @@ npm run build
 ```
 
 Salida en `dist/nemkit-web/browser`. Netlify usa `netlify.toml`
-(`publish = "dist/nemkit-web/browser"`).
+(`publish = "dist/nemkit-web/browser"`) y el fallback SPA a `index.html`.
 
 ## Estructura
 
-- `src/app/app.component.ts`: datos de los productos y URLs de acceso.
-- `src/app/app.config.ts`: preset de PrimeNG (Aura + neón) y modo oscuro.
-- `src/app/app.component.html`: hero, catálogo, secciones de Inventory y teaser
-  de Notify.
-- `src/styles.css`: sistema visual (negro técnico + verde neón) y estilos de productos.
-- `src/index.html`: SEO, Open Graph y JSON-LD de la plataforma.
-- `public/`: favicon, imagen OG, robots y sitemap.
+- `src/app/app.routes.ts`: rutas del portal.
+- `src/app/content/products.ts`: contenido de Inventory y Restaurant.
+- `src/app/pages/`: home, Inventory y Restaurant.
+- `src/app/shared/`: header, footer, tarjetas, visuales y página de producto.
+- `src/styles.css`: sistema visual y estilos del portal.
+- `src/index.html`: SEO, Open Graph y JSON-LD de Inventory y Restaurant.
+- `public/`: favicon, OG, robots y sitemap.
 
 ## Identidad
 
-- **Paleta**: negro técnico `#070A08`, panel `#0D1310`, borde `#1E2A24`,
-  texto `#F3F6F4`, verde petróleo `#276650` (rellenos y CTAs) y su tinte legible
-  `#5FA98C` para acentos de texto; hover `#327A60` y profundo `#15332D`. La app
-  de Inventory comparte ese verde; Nemkit se distingue por el fondo oscuro y la
-  retícula.
-- **Tipografía**: Space Grotesk para titulares, Inter para lectura y
-  JetBrains Mono para etiquetas y datos.
-- **Stack visual**: Angular 19 standalone, TailwindCSS 4 (PostCSS) y PrimeNG 19
-  (Aura con preset petróleo) para botones y etiquetas.
-- **Marca**: mangle (árbol con raíces aéreas) dibujado en SVG. Vive en
-  `public/favicon.svg`, en el header/footer de `app.component.html` y en
-  `public/og-image.svg` (fuente vectorial de `og-image.png`).
-
-Cuando Notify se despliegue, cambia su `status` a `available` en
-`app.component.ts`; la tarjeta pasará a enlazar `notifyLandingUrl`.
+- Base oscura: `#070A08`, paneles `#0D1310`, bordes `#1E2A24`,
+  textos `#F3F6F4` / `#A6B3AB`.
+- Inventory: verde petróleo `#276650` y acento `#5FA98C`.
+- Restaurant: ámbar/terracota `#B5653A` y acento `#E0A458`.
+- Tipografía: Space Grotesk, Inter y JetBrains Mono.
+- Stack: Angular 19 standalone, TailwindCSS 4 y PrimeNG 19.

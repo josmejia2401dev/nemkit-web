@@ -1,0 +1,48 @@
+<div class="pv" [class.pv--restaurant]="productId === 'restaurant'">
+  <div class="pv-window">
+    <div class="pv-topbar">
+      <div class="pv-brand">
+        <span></span>
+        nemkit <small>{{ productId === "restaurant" ? "RESTAURANT" : "INVENTORY" }}</small>
+      </div>
+      <div class="pv-user"><i>NM</i><span>Negocio</span></div>
+    </div>
+
+    <div class="pv-body">
+      <div class="pv-heading">
+        <div>
+          <small>VISTA ILUSTRATIVA</small>
+          <strong>{{ data.title }}</strong>
+        </div>
+        <span>Hoy ⌄</span>
+      </div>
+
+      <div class="pv-metrics">
+        @for (metric of data.metrics; track metric.label) {
+          <div class="pv-metric" [class]="'pv-metric--' + metric.tone">
+            <span>{{ metric.label }}</span>
+            <strong>{{ metric.value }}</strong>
+            <small>{{ metric.hint }}</small>
+          </div>
+        }
+      </div>
+
+      <div class="pv-list">
+        <div class="pv-list-head">
+          <span>Actividad</span>
+          <small>Ver todo ↗</small>
+        </div>
+        @for (row of data.rows; track row.title) {
+          <div class="pv-row">
+            <span class="pv-dot" [class]="'pv-dot--' + row.tone"></span>
+            <div class="pv-row-copy">
+              <strong>{{ row.title }}</strong>
+              <small>{{ row.subtitle }}</small>
+            </div>
+            <span class="pv-value" [class]="'pv-value--' + row.tone">{{ row.value }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

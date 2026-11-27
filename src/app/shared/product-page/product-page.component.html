@@ -1,0 +1,147 @@
+<div class="nk-page" [class]="'nk-page--' + product.accent">
+  <section class="nk-hero section-shell">
+    <div class="nk-hero-copy">
+      <p class="eyebrow"><span></span> {{ product.eyebrow }}</p>
+      <h1>{{ product.tagline }}</h1>
+      <p class="nk-hero-description">{{ product.description }}</p>
+
+      <ul class="nk-hero-bullets">
+        @for (bullet of product.heroBullets; track bullet) {
+          <li><span aria-hidden="true">✓</span>{{ bullet }}</li>
+        }
+      </ul>
+
+      <div class="nk-hero-actions">
+        <a class="button" [href]="product.registerUrl">
+          Crear cuenta <span aria-hidden="true">↗</span>
+        </a>
+        <a class="text-link" [href]="product.loginUrl">Ya tengo cuenta</a>
+      </div>
+
+      <p class="nk-hero-note">Plan gratuito. Sin tarjeta.</p>
+    </div>
+
+    <div class="nk-hero-visual">
+      <app-product-visual [kind]="product.screenshots[0].kind" [productId]="product.id" />
+    </div>
+  </section>
+
+  <section class="nk-audience section-shell">
+    <p class="eyebrow">PARA QUIÉN ES</p>
+    <div class="nk-audience-list">
+      @for (item of product.audience; track item) {
+        <span>{{ item }}</span>
+      }
+    </div>
+  </section>
+
+  <section class="nk-section section-shell">
+    <div class="nk-section-heading">
+      <p class="eyebrow">FUNCIONALIDADES</p>
+      <h2>Lo que puedes hacer con {{ product.name }}.</h2>
+    </div>
+    <div class="nk-feature-grid">
+      @for (feature of product.features; track feature.title) {
+        <article class="nk-feature-card">
+          <span class="nk-feature-icon" aria-hidden="true">{{ feature.icon }}</span>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="nk-flow section-shell">
+    <div class="nk-section-heading">
+      <p class="eyebrow">CÓMO FUNCIONA</p>
+      <h2>Un flujo claro, sin pasos de más.</h2>
+    </div>
+    <div class="nk-flow-grid">
+      @for (step of product.flow; track step.index) {
+        <article class="nk-flow-step">
+          <span>{{ step.index }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="nk-section section-shell">
+    <div class="nk-section-heading">
+      <p class="eyebrow">EQUIPO</p>
+      <h2>Cada rol tiene su espacio.</h2>
+    </div>
+    <div class="nk-role-grid">
+      @for (role of product.roles; track role.name) {
+        <article class="nk-role-card">
+          <strong>{{ role.name }}</strong>
+          <p>{{ role.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="nk-gallery section-shell">
+    <div class="nk-section-heading">
+      <p class="eyebrow">ASÍ SE VE</p>
+      <h2>Pantallas pensadas para operar, no para complicarte.</h2>
+    </div>
+    <div class="nk-gallery-grid">
+      @for (shot of product.screenshots; track shot.title) {
+        <article class="nk-gallery-card">
+          <app-product-visual [kind]="shot.kind" [productId]="product.id" />
+          <div class="nk-gallery-copy">
+            <h3>{{ shot.title }}</h3>
+            <p>{{ shot.caption }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="nk-plan section-shell">
+    <div class="nk-plan-card">
+      <div>
+        <p class="eyebrow">PLAN</p>
+        <h2>{{ product.plan.name }}</h2>
+        <p class="nk-plan-price">{{ product.plan.price }}</p>
+        <p class="nk-plan-note">{{ product.plan.note }}</p>
+      </div>
+      <ul>
+        @for (limit of product.plan.limits; track limit) {
+          <li><span aria-hidden="true">✓</span>{{ limit }}</li>
+        }
+      </ul>
+      <a class="button" [href]="product.registerUrl">Empezar gratis <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="nk-faq section-shell">
+    <div class="nk-section-heading">
+      <p class="eyebrow">PREGUNTAS FRECUENTES</p>
+      <h2>Antes de empezar.</h2>
+    </div>
+    <div class="nk-faq-list">
+      @for (item of product.faq; track item.question) {
+        <details>
+          <summary>{{ item.question }}</summary>
+          <p>{{ item.answer }}</p>
+        </details>
+      }
+    </div>
+  </section>
+
+  <section class="nk-final-cta section-shell">
+    <div>
+      <p class="eyebrow">TU SIGUIENTE PASO</p>
+      <h2>Empieza con {{ product.name }}.</h2>
+      <p>Crea tu cuenta, configura el negocio y empieza a operar con un flujo claro.</p>
+    </div>
+    <div class="nk-final-actions">
+      <a class="button" [href]="product.registerUrl">Crear cuenta <span aria-hidden="true">↗</span></a>
+      <a class="text-link" [href]="product.loginUrl">Ya tengo cuenta</a>
+      <a class="text-link" routerLink="/">Volver al portal</a>
+    </div>
+  </section>
+</div>
