@@ -5,4 +5,4 @@ Allow: /
 Disallow: /login
 Disallow: /register
 
-Sitemap: https://nemkit.netlify.app/sitemap.xml
+Sitemap: https://nemkit.pages.dev/sitemap.xml

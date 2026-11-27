@@ -6,7 +6,7 @@ Portal público de **Nemkit** para presentar los dos productos comerciales:
 |---|---|---|
 | Nemkit Inventory | `https://neminv-app.netlify.app` | Disponible |
 | Nemkit Restaurant | `https://nemres.netlify.app` | Disponible |
-| Nemkit (este portal) | `https://nemkit.netlify.app` | — |
+| Nemkit (este portal) | `https://nemkit.pages.dev` | — |
 
 Notify no forma parte de este portal: es un producto privado e interno.
 
@@ -43,8 +43,19 @@ Producción:
 npm run build
 ```
 
-Salida en `dist/nemkit-web/browser`. Netlify usa `netlify.toml`
-(`publish = "dist/nemkit-web/browser"`) y el fallback SPA a `index.html`.
+Salida en `dist/nemkit-web/browser`.
+
+### Cloudflare Pages
+
+- Build command: `npm run build`
+- Build output directory: `dist/nemkit-web/browser`
+- SPA fallback: `public/_redirects` con `/* /index.html 200`
+
+Cloudflare no lee `netlify.toml`; por eso el fallback vive en `public/_redirects`
+y se copia al directorio de salida. Si la raíz `/` también devuelve 404, revisa
+que el output directory sea exactamente `dist/nemkit-web/browser`.
+
+Netlify sigue funcionando con `netlify.toml` mientras se completa la migración.
 
 ## Estructura
 
